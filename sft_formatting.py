@@ -89,6 +89,20 @@ def format_copa(examples):
         texts.append(text)
     return texts
 
+def format_pubmedqa(examples):
+    texts = []
+    for question, context, long_answer, final_decision in zip(
+        examples["question"], examples["context"], examples["long_answer"], examples["final_decision"]
+    ):
+        text = (
+            f"### Question:\n{question}\n\n"
+            f"### Context:\n{context}\n\n"
+            f"### Long Answer:\n{long_answer}\n\n"
+            f"### Final Decision:\n{final_decision}"
+        )
+        texts.append(text)
+    return texts
+
 
 def format_socialiqa(examples):
     texts = []
