@@ -9,4 +9,12 @@ Datasets:
 6) Domain-specific (medical): https://huggingface.co/datasets/qiaojin/PubMedQA
 7) Domain-specific (legal): 
 8) Something with less data (eg math-maybe a subset of the same dataset)
-9) Training on multimodal and then use just text: 
+9) Training on multimodal and then use just text:
+
+
+
+Commands:
+Data transfering:
+1) step ssh login 'aggelos.kanatas@athenarc.gr' --provisioner cineca-hpc
+2) ssh-add -L
+3) 
