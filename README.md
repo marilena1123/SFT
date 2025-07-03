@@ -5,4 +5,5 @@ Datasets:
 2) Code: https://huggingface.co/datasets/Vezora/Tested-143k-Python-Alpaca
 3) Multilingual: https://huggingface.co/datasets/CohereForAI/aya_dataset
 4) Language: https://huggingface.co/datasets/tatsu-lab/alpaca
-5)  
+5) Instruction following: https://huggingface.co/datasets/Post-training-Data-Flywheel/AutoIF-instruct-61k-with-funcs
+6) Domain-specific (medical): https://huggingface.co/datasets/qiaojin/PubMedQA  
