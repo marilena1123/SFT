@@ -8,16 +8,24 @@ datasets = [
     "CohereForAI/aya_dataset",
     "tatsu-lab/alpaca",
     "pkavumba/balanced-copa",
-    "allenai/social_i_qa"
+    "allenai/social_i_qa",
+    "qiaojin/PubMedQA"
 ]
 
 for d in datasets:
     print(f"Checking: {d}")
     try:
-        ds = load_dataset(
-            d,
-            cache_dir="./hf_cache"
-        )
+        if d == "qiaojin/PubMedQA":
+            ds = load_dataset(
+                d, 
+                'pqa_labeled',
+                cache_dir="./hf_cache"
+            )
+        else:
+            ds = load_dataset(
+                d,
+                cache_dir="./hf_cache"
+            )
         print(f">>> {d} already in cache.")
     except FileNotFoundError:
         print(f">>> {d} not found in cache. Downloading...")

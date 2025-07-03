@@ -11,7 +11,8 @@ datasets_to_check = [
     "CohereForAI/aya_dataset",
     "tatsu-lab/alpaca",
     "pkavumba/balanced-copa",
-    "allenai/social_i_qa"
+    "allenai/social_i_qa",
+    "qiaojin/PubMedQA"
 ]
 
 for dataset_name in datasets_to_check:
@@ -20,7 +21,10 @@ for dataset_name in datasets_to_check:
     print("=" * 80)
 
     try:
-        ds = load_dataset(dataset_name, split="train", cache_dir=cache_dir)
+        if dataset_name == "qiaojin/PubMedQA":
+            ds = load_dataset(dataset_name, 'pqa_artificial', split="train", cache_dir=cache_dir)
+        else:
+            ds = load_dataset(dataset_name, split="train", cache_dir=cache_dir)
         print("Loaded successfully.")
     except Exception as e:
         print(f"ERROR loading {dataset_name}: {e}")
