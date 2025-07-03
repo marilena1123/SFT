@@ -7,6 +7,6 @@ Datasets:
 4) Language: https://huggingface.co/datasets/tatsu-lab/alpaca
 5) Instruction following: https://huggingface.co/datasets/Post-training-Data-Flywheel/AutoIF-instruct-61k-with-funcs
 6) Domain-specific (medical): https://huggingface.co/datasets/qiaojin/PubMedQA
-7) Legical: 
+7) Legal: 
 8) Something with less data (eg math-maybe a subset of the same dataset)
 9) Training on multimodal and then use just text: 
